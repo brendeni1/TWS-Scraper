@@ -79,10 +79,13 @@ print(shiftsFormatted)
 #         "date": "Mar 3, 2025",
 #         "shifts": [
 #             {
-#                 "employeeName": "BRIAN BROUILLETTE",
-#                 "department": "PRO SHOP",
+#                 "employeeName": "NAME",
+#                 "department": "DEPT",
 #                 "startDate": "Mar 3, 2025 9:00a",
 #                 "endDate": "Mar 3, 2025 5:00p",
+#             },
+#             {
+#                 ...
 #             }
 #         ],
 #     },
@@ -90,10 +93,10 @@ print(shiftsFormatted)
 #         "date": "Mar 4, 2025",
 #         "shifts": [
 #             {
-#                 "employeeName": "BRIAN BROUILLETTE",
-#                 "department": "PRO SHOP",
-#                 "startDate": "Mar 4, 2025 9:00a",
-#                 "endDate": "Mar 4, 2025 4:45p",
+#                 ...
+#             },
+#             {
+#                 ...
 #             }
 #         ],
 #     }
