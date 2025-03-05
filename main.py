@@ -12,40 +12,49 @@ import requests.cookies
 PREVIEW_FILE_NAME = "preview.html"
 TWS_COOKIE_NAME = "TWS_COOKIES"
 
-def extract_shifts(html_content: str):
-    soup = BeautifulSoup(html_content, 'html.parser')
-    shifts_by_date = {}
-    current_year = datetime.now().year
+def extractShifts(htmlContent: str):
+    soup = BeautifulSoup(htmlContent, 'html.parser')
+    shiftsByDate = {}
+    currentYear = datetime.now().year
+    
+    # Extract employee ID mapping from option values
+    employeeIds = {}
+    for option in soup.find_all('option'):
+        if option.has_attr('value') and option.text.strip():
+            employeeIds[option.text.strip()] = option['value']
     
     # Find all shift entries in the table
-    for shift_entry in soup.find_all('td', style=re.compile('background:#efef7d')):
-        name_tag = shift_entry.find('p')
-        dept_tag = name_tag.find_next('p') if name_tag else None
-        start_time_tag = shift_entry.find('font')
-        end_time_tag = start_time_tag.find_next('font') if start_time_tag else None
-        date_tag = shift_entry.find_previous("div", class_="cal-date")
+    for shiftEntry in soup.find_all('td', style=re.compile('background:#efef7d')):
+        nameTag = shiftEntry.find('p')
+        deptTag = nameTag.find_next('p') if nameTag else None
+        startTimeTag = shiftEntry.find('font')
+        endTimeTag = startTimeTag.find_next('font') if startTimeTag else None
+        dateTag = shiftEntry.find_previous("div", class_="cal-date")
         
-        if name_tag and dept_tag and start_time_tag and end_time_tag and date_tag:
-            employee_name = name_tag.get_text(strip=True)
-            department = dept_tag.get_text(strip=True)
-            start_time = start_time_tag.get_text(strip=True).replace("To", "").strip()
-            end_time = end_time_tag.get_text(strip=True)
-            date_text = date_tag.get_text(strip=True)
+        if nameTag and deptTag and startTimeTag and endTimeTag and dateTag:
+            employeeName = nameTag.get_text(strip=True)
+            department = deptTag.get_text(strip=True)
+            startTime = startTimeTag.get_text(strip=True).replace("To", "").strip()
+            endTime = endTimeTag.get_text(strip=True)
+            dateText = dateTag.get_text(strip=True)
+            employeeId = employeeIds.get(employeeName, "Unknown")
             
             # Append the most realistic year
-            date = f"{date_text}, {current_year}"
+            date = f"{dateText}, {currentYear}"
             
-            if date not in shifts_by_date:
-                shifts_by_date[date] = {"date": date, "shifts": []}
+            if date not in shiftsByDate:
+                shiftsByDate[date] = {"date": date, "shifts": []}
             
-            shifts_by_date[date]["shifts"].append({
-                "employeeName": employee_name,
+            shiftsByDate[date]["shifts"].append({
+                "employeeId": int(employeeId),
+                "employeeName": employeeName,
                 "department": department,
-                "startDate": f"{date} {start_time}",
-                "endDate": f"{date} {end_time}",
+                "startDate": f"{date} {startTime}",
+                "endDate": f"{date} {endTime}",
             })
     
-    return list(shifts_by_date.values())
+    return list(shiftsByDate.values())
+
 
 load_dotenv()
 
@@ -70,31 +79,26 @@ response = session.get(
 with open(PREVIEW_FILE_NAME, "w") as file:
     file.write(response.text)
 
-shiftsFormatted = extract_shifts(response.text)
+shiftsFormatted = extractShifts(response.text)
 
 print(shiftsFormatted)
 
 # SCHEMA = [
 #     {
-#         "date": "Mar 3, 2025",
+#         "date": "Mar X, 20XX",
 #         "shifts": [
 #             {
-#                 "employeeName": "NAME",
-#                 "department": "DEPT",
-#                 "startDate": "Mar 3, 2025 9:00a",
-#                 "endDate": "Mar 3, 2025 5:00p",
-#             },
-#             {
-#                 ...
+#                 "employeeId": NUM,
+#                 "employeeName": STR,
+#                 "department": STR,
+#                 "startDate": STR,
+#                 "endDate": STR,
 #             }
 #         ],
 #     },
 #     {
 #         "date": "Mar 4, 2025",
 #         "shifts": [
-#             {
-#                 ...
-#             },
 #             {
 #                 ...
 #             }
