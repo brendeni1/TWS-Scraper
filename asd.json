@@ -1,0 +1,324 @@
+[
+    {
+        "date": "Mar 3, 2025",
+        "shifts": [
+            {
+                "employeeId": 52572,
+                "employeeName": "BRIAN BROUILLETTE",
+                "department": "PRO SHOP",
+                "startDate": "Mar 3, 2025 9:00a",
+                "endDate": "Mar 3, 2025 5:00p"
+            }
+        ]
+    },
+    {
+        "date": "Mar 4, 2025",
+        "shifts": [
+            {
+                "employeeId": 52572,
+                "employeeName": "BRIAN BROUILLETTE",
+                "department": "PRO SHOP",
+                "startDate": "Mar 4, 2025 9:00a",
+                "endDate": "Mar 4, 2025 4:45p"
+            }
+        ]
+    },
+    {
+        "date": "Mar 5, 2025",
+        "shifts": [
+            {
+                "employeeId": 52572,
+                "employeeName": "BRIAN BROUILLETTE",
+                "department": "PRO SHOP",
+                "startDate": "Mar 5, 2025 9:00a",
+                "endDate": "Mar 5, 2025 5:00p"
+            }
+        ]
+    },
+    {
+        "date": "Mar 6, 2025",
+        "shifts": [
+            {
+                "employeeId": 52572,
+                "employeeName": "BRIAN BROUILLETTE",
+                "department": "PRO SHOP",
+                "startDate": "Mar 6, 2025 9:00a",
+                "endDate": "Mar 6, 2025 5:00p"
+            }
+        ]
+    },
+    {
+        "date": "Mar 7, 2025",
+        "shifts": [
+            {
+                "employeeId": 52572,
+                "employeeName": "BRIAN BROUILLETTE",
+                "department": "PRO SHOP",
+                "startDate": "Mar 7, 2025 9:00a",
+                "endDate": "Mar 7, 2025 2:00p"
+            },
+            {
+                "employeeId": 52572,
+                "employeeName": "BRIAN BROUILLETTE",
+                "department": "TRAINING - PRO SHOP FRONT",
+                "startDate": "Mar 7, 2025 2:00p",
+                "endDate": "Mar 7, 2025 5:00p"
+            }
+        ]
+    },
+    {
+        "date": "Mar 10, 2025",
+        "shifts": [
+            {
+                "employeeId": 52572,
+                "employeeName": "BRIAN BROUILLETTE",
+                "department": "PRO SHOP",
+                "startDate": "Mar 10, 2025 9:00a",
+                "endDate": "Mar 10, 2025 5:00p"
+            }
+        ]
+    },
+    {
+        "date": "Mar 11, 2025",
+        "shifts": [
+            {
+                "employeeId": 52572,
+                "employeeName": "BRIAN BROUILLETTE",
+                "department": "PRO SHOP",
+                "startDate": "Mar 11, 2025 9:00a",
+                "endDate": "Mar 11, 2025 5:00p"
+            }
+        ]
+    },
+    {
+        "date": "Mar 12, 2025",
+        "shifts": [
+            {
+                "employeeId": 52572,
+                "employeeName": "BRIAN BROUILLETTE",
+                "department": "PRO SHOP",
+                "startDate": "Mar 12, 2025 9:00a",
+                "endDate": "Mar 12, 2025 5:00p"
+            }
+        ]
+    },
+    {
+        "date": "Mar 17, 2025",
+        "shifts": [
+            {
+                "employeeId": 52572,
+                "employeeName": "BRIAN BROUILLETTE",
+                "department": "PRO SHOP",
+                "startDate": "Mar 17, 2025 9:00a",
+                "endDate": "Mar 17, 2025 5:00p"
+            },
+            {
+                "employeeId": 52573,
+                "employeeName": "CORY BURNS",
+                "department": "PRO SHOP",
+                "startDate": "Mar 17, 2025 9:00a",
+                "endDate": "Mar 17, 2025 5:00p"
+            }
+        ]
+    },
+    {
+        "date": "Mar 18, 2025",
+        "shifts": [
+            {
+                "employeeId": 52572,
+                "employeeName": "BRIAN BROUILLETTE",
+                "department": "PRO SHOP",
+                "startDate": "Mar 18, 2025 9:00a",
+                "endDate": "Mar 18, 2025 5:00p"
+            },
+            {
+                "employeeId": 52573,
+                "employeeName": "CORY BURNS",
+                "department": "PRO SHOP",
+                "startDate": "Mar 18, 2025 9:00a",
+                "endDate": "Mar 18, 2025 5:00p"
+            }
+        ]
+    },
+    {
+        "date": "Mar 19, 2025",
+        "shifts": [
+            {
+                "employeeId": 52572,
+                "employeeName": "BRIAN BROUILLETTE",
+                "department": "PRO SHOP",
+                "startDate": "Mar 19, 2025 9:00a",
+                "endDate": "Mar 19, 2025 5:00p"
+            },
+            {
+                "employeeId": 52573,
+                "employeeName": "CORY BURNS",
+                "department": "PRO SHOP",
+                "startDate": "Mar 19, 2025 9:00a",
+                "endDate": "Mar 19, 2025 5:00p"
+            }
+        ]
+    },
+    {
+        "date": "Mar 20, 2025",
+        "shifts": [
+            {
+                "employeeId": 52573,
+                "employeeName": "CORY BURNS",
+                "department": "PRO SHOP",
+                "startDate": "Mar 20, 2025 9:00a",
+                "endDate": "Mar 20, 2025 5:00p"
+            }
+        ]
+    },
+    {
+        "date": "Mar 21, 2025",
+        "shifts": [
+            {
+                "employeeId": 52572,
+                "employeeName": "BRIAN BROUILLETTE",
+                "department": "PRO SHOP",
+                "startDate": "Mar 21, 2025 9:00a",
+                "endDate": "Mar 21, 2025 5:00p"
+            }
+        ]
+    },
+    {
+        "date": "Mar 22, 2025",
+        "shifts": [
+            {
+                "employeeId": null,
+                "employeeName": "BACKSHOP",
+                "department": "Backshop",
+                "startDate": "Mar 22, 2025 10:00a",
+                "endDate": "Mar 22, 2025 3:00p"
+            },
+            {
+                "employeeId": 52572,
+                "employeeName": "BRIAN BROUILLETTE",
+                "department": "PRO SHOP",
+                "startDate": "Mar 22, 2025 10:00a",
+                "endDate": "Mar 22, 2025 3:00p"
+            },
+            {
+                "employeeId": 52572,
+                "employeeName": "BRIAN BROUILLETTE",
+                "department": "PRO SHOP",
+                "startDate": "Mar 22, 2025 9:00a",
+                "endDate": "Mar 22, 2025 10:00a"
+            },
+            {
+                "employeeId": 52566,
+                "employeeName": "BRYCE HUGHSON",
+                "department": "PRO SHOP",
+                "startDate": "Mar 22, 2025 10:00a",
+                "endDate": "Mar 22, 2025 3:00p"
+            },
+            {
+                "employeeId": 52570,
+                "employeeName": "CALEB MCLENNAN",
+                "department": "BACKSHOP",
+                "startDate": "Mar 22, 2025 10:00a",
+                "endDate": "Mar 22, 2025 3:00p"
+            },
+            {
+                "employeeId": 52567,
+                "employeeName": "CAMERON WAY",
+                "department": "BACKSHOP",
+                "startDate": "Mar 22, 2025 10:00a",
+                "endDate": "Mar 22, 2025 3:00p"
+            },
+            {
+                "employeeId": 52568,
+                "employeeName": "COREY WAY",
+                "department": "BACKSHOP",
+                "startDate": "Mar 22, 2025 10:00a",
+                "endDate": "Mar 22, 2025 3:00p"
+            },
+            {
+                "employeeId": 52573,
+                "employeeName": "CORY BURNS",
+                "department": "PRO SHOP",
+                "startDate": "Mar 22, 2025 9:00a",
+                "endDate": "Mar 22, 2025 10:00a"
+            },
+            {
+                "employeeId": 52573,
+                "employeeName": "CORY BURNS",
+                "department": "PRO SHOP",
+                "startDate": "Mar 22, 2025 10:00a",
+                "endDate": "Mar 22, 2025 3:00p"
+            },
+            {
+                "employeeId": 52833,
+                "employeeName": "ERIC FAZEKAS",
+                "department": "BACKSHOP",
+                "startDate": "Mar 22, 2025 10:00a",
+                "endDate": "Mar 22, 2025 3:00p"
+            },
+            {
+                "employeeId": 52575,
+                "employeeName": "EVAN MCCONNELL",
+                "department": "BACKSHOP",
+                "startDate": "Mar 22, 2025 10:00a",
+                "endDate": "Mar 22, 2025 3:00p"
+            },
+            {
+                "employeeId": 52563,
+                "employeeName": "GREG ATHERTON",
+                "department": "PRO SHOP",
+                "startDate": "Mar 22, 2025 10:00a",
+                "endDate": "Mar 22, 2025 3:00p"
+            },
+            {
+                "employeeId": 52834,
+                "employeeName": "JACK KOSIKAR",
+                "department": "BACKSHOP",
+                "startDate": "Mar 22, 2025 10:00a",
+                "endDate": "Mar 22, 2025 3:00p"
+            },
+            {
+                "employeeId": 52835,
+                "employeeName": "KYLIE PROVOST",
+                "department": "PRO SHOP",
+                "startDate": "Mar 22, 2025 10:00a",
+                "endDate": "Mar 22, 2025 3:00p"
+            },
+            {
+                "employeeId": 52576,
+                "employeeName": "LISA GREENHAM",
+                "department": "BACKSHOP",
+                "startDate": "Mar 22, 2025 10:00a",
+                "endDate": "Mar 22, 2025 3:00p"
+            },
+            {
+                "employeeId": 52571,
+                "employeeName": "LUCA FIORITO",
+                "department": "BACKSHOP",
+                "startDate": "Mar 22, 2025 10:00a",
+                "endDate": "Mar 22, 2025 3:00p"
+            },
+            {
+                "employeeId": 52574,
+                "employeeName": "MATTHEW FAZEKAS",
+                "department": "BACKSHOP",
+                "startDate": "Mar 22, 2025 10:00a",
+                "endDate": "Mar 22, 2025 3:00p"
+            },
+            {
+                "employeeId": 52564,
+                "employeeName": "NANCY MCCANN",
+                "department": "PRO SHOP",
+                "startDate": "Mar 22, 2025 10:00a",
+                "endDate": "Mar 22, 2025 3:00p"
+            },
+            {
+                "employeeId": 52565,
+                "employeeName": "SAMANTHA GREENHAM",
+                "department": "PRO SHOP",
+                "startDate": "Mar 22, 2025 10:00a",
+                "endDate": "Mar 22, 2025 3:00p"
+            }
+        ]
+    }
+]

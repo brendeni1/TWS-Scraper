@@ -12,48 +12,46 @@ import requests.cookies
 PREVIEW_FILE_NAME = "preview.html"
 TWS_COOKIE_NAME = "TWS_COOKIES"
 
-def extractShifts(htmlContent: str):
-    soup = BeautifulSoup(htmlContent, 'html.parser')
-    shiftsByDate = {}
-    currentYear = datetime.now().year
+def extractShifts(html_content: str):
+    soup = BeautifulSoup(html_content, 'html.parser')
+    shifts_by_date = {}
+    current_year = datetime.now().year
     
     # Extract employee ID mapping from option values
-    employeeIds = {}
-    for option in soup.find_all('option'):
+    employee_ids = {}
+    for option in soup.select('select#OtherLoginID option'):
         if option.has_attr('value') and option.text.strip():
-            employeeIds[option.text.strip()] = option['value']
+            employee_ids[option.text.strip()] = option['value']
     
-    # Find all shift entries in the table
-    for shiftEntry in soup.find_all('td', style=re.compile('background:#efef7d')):
-        nameTag = shiftEntry.find('p')
-        deptTag = nameTag.find_next('p') if nameTag else None
-        startTimeTag = shiftEntry.find('font')
-        endTimeTag = startTimeTag.find_next('font') if startTimeTag else None
-        dateTag = shiftEntry.find_previous("div", class_="cal-date")
+    # Find all shift entries
+    for shift_entry in soup.find_all('td', style=re.compile('background:#efef7d')):
+        name_tag = shift_entry.find('p')
+        dept_tag = name_tag.find_next('p') if name_tag else None
+        time_tags = shift_entry.find_all('font')
+        date_tag = shift_entry.find_previous("div", class_="cal-date")
         
-        if nameTag and deptTag and startTimeTag and endTimeTag and dateTag:
-            employeeName = nameTag.get_text(strip=True)
-            department = deptTag.get_text(strip=True)
-            startTime = startTimeTag.get_text(strip=True).replace("To", "").strip()
-            endTime = endTimeTag.get_text(strip=True)
-            dateText = dateTag.get_text(strip=True)
-            employeeId = employeeIds.get(employeeName, "Unknown")
+        if name_tag and dept_tag and len(time_tags) == 2 and date_tag:
+            employee_name = name_tag.get_text(strip=True)
+            department = dept_tag.get_text(strip=True)
+            start_time = time_tags[0].get_text(strip=True).replace("To", "").strip()
+            end_time = time_tags[1].get_text(strip=True)
+            date_text = date_tag.get_text(strip=True)
+            employee_id = employee_ids.get(employee_name, "Unknown")
             
-            # Append the most realistic year
-            date = f"{dateText}, {currentYear}"
+            date = f"{date_text}, {current_year}"
             
-            if date not in shiftsByDate:
-                shiftsByDate[date] = {"date": date, "shifts": []}
+            if date not in shifts_by_date:
+                shifts_by_date[date] = {"date": date, "shifts": []}
             
-            shiftsByDate[date]["shifts"].append({
-                "employeeId": int(employeeId),
-                "employeeName": employeeName,
+            shifts_by_date[date]["shifts"].append({
+                "employeeId": int(employee_id) if employee_id.isdigit() else None,
+                "employeeName": employee_name,
                 "department": department,
-                "startDate": f"{date} {startTime}",
-                "endDate": f"{date} {endTime}",
+                "startDate": f"{date} {start_time}",
+                "endDate": f"{date} {end_time}",
             })
     
-    return list(shiftsByDate.values())
+    return list(shifts_by_date.values())
 
 
 load_dotenv()
